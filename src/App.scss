@@ -1,6 +1,7 @@
 @import "styles/variables";
 @import "styles/header";
 @import "styles/categories";
+@import "styles/main";
 
 * {
   margin: 0;
@@ -12,17 +13,14 @@ body {
   background-color: $bodyColor;
 }
 
-.main {
-  display: flex;
-  padding: 15px 10px;
-  min-height: calc(100vh - 70px);
-  
-  &__section {
-    border-radius: 5px;
-    padding: 20px 15px;
-    background-color: #fff;
-    flex-grow: 1;
-    margin-left: 15px;
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+
+  &:hover {
+    color: black;
   }
 }
+
 

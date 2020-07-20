@@ -1,10 +1,4 @@
-const initialState = {
-    electric: [],
-    bass: [],
-    acoustic: [],
-    ukulele: [],
-    others: []
-}
+import {initialState} from "./initialState";
 
 export default (state = initialState, action) => {
     switch (action.type) {
