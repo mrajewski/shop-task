@@ -1,0 +1,33 @@
+.categories {
+  background-color: $fontColor;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 20px 15px;
+  width: 20%;
+  max-width: 300px;
+
+  &__title {
+    color: $themeColor;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__element {
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: darken($bodyColor, 20%);
+
+    &:hover {
+      color: darken($bodyColor, 50%);
+      transition: .2s;
+    }
+  }
+
+}

@@ -1,3 +1,28 @@
-body {
-  background-color: #000;
+@import "styles/variables";
+@import "styles/header";
+@import "styles/categories";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: $bodyColor;
+}
+
+.main {
+  display: flex;
+  padding: 15px 10px;
+  min-height: calc(100vh - 70px);
+  
+  &__section {
+    border-radius: 5px;
+    padding: 20px 15px;
+    background-color: #fff;
+    flex-grow: 1;
+    margin-left: 15px;
+  }
+}
+
