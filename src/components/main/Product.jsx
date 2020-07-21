@@ -45,7 +45,6 @@ const Product = ({product, cartUpdate}) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps.match.params.product)
     if (!ownProps.match.params.product || ownProps.match.params.product === "list") {
         return {}
     }

@@ -57,7 +57,6 @@ const List = ({products, name}) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps)
     return {
         products: state.products[ownProps.match.params.product ? ownProps.match.params.product: 'electric'],
         name: ownProps.match.params.product

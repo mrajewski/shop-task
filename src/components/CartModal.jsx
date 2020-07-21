@@ -1,15 +1,17 @@
 import React from "react";
 import {Modal} from 'semantic-ui-react'
 import {connect} from "react-redux"
+import {cartClear} from "../actions";
 
-const CartModal = ({open, close, products}) => {
+const CartModal = ({open, close, products, cartClear}) => {
     const showProducts = () => {
 
         return (
             <div className="cart">
                 {products.map((el, i) => {
                     return (
-                        <div className="cart__item">
+                        <div key={i} className="cart__item">
+                            <span>{i + 1}.</span>
                             <p className="cart__product">{el.name}</p>
                             <p className="cart__price">{el.price} PLN</p>
                             <img key={i} src={el.photo} alt="product thumb"/>
@@ -27,8 +29,8 @@ const CartModal = ({open, close, products}) => {
                 {showProducts()}
             </Modal.Content>
             <Modal.Actions>
-                <button onClick={close} className="ui button">Wyczyść</button>
-                <button onClick={close} className="ui button">Wyjdź</button>
+                <button onClick={cartClear} className="ui button blue">Wyczyść</button>
+                <button onClick={close} className="ui button red">Wyjdź</button>
             </Modal.Actions>
         </Modal>
     )
@@ -38,4 +40,4 @@ const mapStateToProps = (state) => {
         products: state.cart
     }
 }
-export default connect(mapStateToProps)(CartModal)
+export default connect(mapStateToProps, {cartClear})(CartModal)
