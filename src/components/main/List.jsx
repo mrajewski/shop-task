@@ -8,7 +8,7 @@ const List = ({products, name}) => {
         let title;
         switch (name) {
             case "electric":
-                title = "Gitary Eleketryczne"
+                title = "Gitary Elektryczne"
                 break
             case "bass":
                 title = "Gitary Basowe"
