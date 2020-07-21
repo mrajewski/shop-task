@@ -35,7 +35,7 @@ const List = ({products, name}) => {
             <>
                 {products.map(el => {
                     return (
-                        <Link to={`/${name}/${el.id}`} key={el.id} className="main__element">
+                        <Link to={`/${name ? name : "electric"}/${el.id}`} key={el.id} className="main__element">
                                 <img src={el.photo} alt="product photo"/>
                                 <p className="main__price">{el.price} PLN</p>
                                 <p className="main__name">{el.name}</p>
