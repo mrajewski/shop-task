@@ -3,6 +3,7 @@
   padding: 15px 10px;
   min-height: calc(100vh - 70px);
 
+
   &__section {
     border-radius: 5px;
     padding: 20px 15px;
@@ -72,6 +73,11 @@
 
   &__header {
     display: flex;
+
+    @media (max-width: 1050px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__photo {
@@ -82,6 +88,10 @@
 
     img {
       object-fit: contain;
+    }
+
+    @media (max-width: 1050px) {
+      width: auto;
     }
   }
 
