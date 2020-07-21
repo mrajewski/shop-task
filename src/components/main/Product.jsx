@@ -5,7 +5,6 @@ import {cartUpdate} from "../../actions";
 import Rating from "./Rating"
 
 const Product = ({product, cartUpdate}) => {
-
     const showProduct = () => {
         const item = product[0]
         return (
