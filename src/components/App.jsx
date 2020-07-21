@@ -16,6 +16,7 @@ const App = () => {
                     <Categories/>
                     <div className="main__section">
                             <Route path="/" exact component={List}/>
+                            <Route path="/shop-task" exact component={List}/>
                             <Route path="/list/:product" exact component={List}/>
                             <Route path="/:product/:id" exact component={Product}/>
                     </div>

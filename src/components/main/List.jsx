@@ -31,6 +31,7 @@ const List = ({products, name}) => {
         )
     }
     const listElements = () => {
+        console.log(name)
         return (
             <>
                 {products.map(el => {
