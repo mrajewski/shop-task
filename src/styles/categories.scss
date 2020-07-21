@@ -8,6 +8,12 @@
   max-width: 300px;
   min-width: 250px;
 
+  @media (max-width: 840px) {
+    width: 100%;
+    max-width: unset;
+    min-width: unset;
+  }
+
   &__title {
     color: $themeColor;
     font-weight: 600;
