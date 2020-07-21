@@ -149,5 +149,23 @@
 }
 
 .cart {
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    p {
+      margin: 0 10px 0 0  !important;
+    }
+    img {
+      height: 40px;
+    }
+  }
+
+  &__product {
+    font-size: 16px;
+  }
 
 }

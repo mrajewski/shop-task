@@ -4,20 +4,19 @@ import {connect} from "react-redux"
 
 const CartModal = ({open, close, products}) => {
     const showProducts = () => {
-        // let items = products.filter((el, i) => el.id === el[i-1].id)
-        // console.log(items)
+
         return (
-            <>
+            <div className="cart">
                 {products.map((el, i) => {
                     return (
-                        <div className="cart">
+                        <div className="cart__item">
+                            <p className="cart__product">{el.name}</p>
                             <p className="cart__price">{el.price} PLN</p>
                             <img key={i} src={el.photo} alt="product thumb"/>
-                            <p className="cart__product">{el.name}</p>
                         </div>
                     )
                 })}
-            </>
+            </div>
         )
     }
 
@@ -28,6 +27,7 @@ const CartModal = ({open, close, products}) => {
                 {showProducts()}
             </Modal.Content>
             <Modal.Actions>
+                <button onClick={close} className="ui button">Wyczyść</button>
                 <button onClick={close} className="ui button">Wyjdź</button>
             </Modal.Actions>
         </Modal>
