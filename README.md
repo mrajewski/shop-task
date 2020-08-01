@@ -34,4 +34,3 @@ $ npm start
 * Opcja usuwania poszczególnych przedmiotów z koszyka
 * Dodawanie komentarzy pod produktami
 * Zmiana Designu
-* Rezponsowyność pod telefony
